@@ -101,3 +101,13 @@
     top: 39.5%;
     left: 50%;
 }
+
+#about-me {
+    background-color: #fff;
+}
+
+#about-me img {
+    border-radius: 50%;
+    height: 15%;
+    width: 15%;
+}
