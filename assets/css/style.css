@@ -1,16 +1,16 @@
 :root {
-    --neon-blue:#03D8F3;
+    --neon-blue: #03D8F3;
     --yellow: #FCEE0C;
-    --dark-gray: #8F8389;
-    --light-gray: #FCEFEF;
+    --dark-gray: #5D737E;
+    --light-gray: #F5F5F5;
 }
 
 
 @font-face {
     font-family: 'violence';
     src: url(../fonts/violenceRaw.ttf) format('truetype'),
-         url(../fonts/violence-raw-webfont.woff2) format('woff2'),
-         url(../fonts/violence-raw-webfont.woff) format('woff');
+        url(../fonts/violence-raw-webfont.woff2) format('woff2'),
+        url(../fonts/violence-raw-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,8 +18,8 @@
 @font-face {
     font-family: 'violenceswash';
     src: url(../fonts/violenceSwash.ttf) format('truetype'),
-         url(../fonts/violence_swash-webfont.woff2) format('woff2'),
-         url(../fonts/violence_swash-webfont.woff) format('woff');
+        url(../fonts/violence_swash-webfont.woff2) format('woff2'),
+        url(../fonts/violence_swash-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -30,20 +30,40 @@
     src: url(../fonts/Montserrat-Bold.ttf) format('truetype');
 }
 
+* {
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'violence', sans-serif;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.4em;
+}
+
+/*
+div {
+    overflow: hidden;
+}
+*/
 
 .header {
     background-color: var(--yellow);
-    padding: 25px;
+    padding: 15px;
 }
 
-/* Resize and fix logo
-#logo {
-    height: 150px;
-    margin-bottom: 0 !important;
-    max-width: 250px;
-     width: 250px;
+/* Resize and fix logo */
+.logo {
+    margin-left: 30px;
 }
-*/
+
 
 #nav {
     float: right;
@@ -59,7 +79,6 @@
     display: inline-block;
 }
 
-/* Need to figure out how to make it reach entire width */
 #nav li:hover {
     background-color: rgba(0, 0, 0, .25);
     border: 2px solid var(--neon-blue);
@@ -76,38 +95,104 @@
 
 .header-image {
     background-color: #000;
+    position: relative;
+}
+
+.header-image h1 {
+    color: var(--yellow);
+    font-family: 'violence', sans-serif;
+    font-size: 6em;
+    position: absolute;
+    top: 33%;
+    left: 45%;
+    text-shadow: 2px 3px var(--neon-blue);
 }
 
 .header-image img {
-    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0, 0, 0, .25));
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .25));
     height: 650px;
     width: 100%;
 }
 
-.header-image #base {
-    color: #03D8F3;
-    font-family: 'violence', sans-serif;
-    font-size: 6em; 
-    position: absolute;
-    top: 40%;
-    left: 50%;
+/* Not sure if this is needed...
+.content {
+    width: 100%;
+    display: inline;
+    margin-left: 20px;
+}
+*/
+
+.float-left {
+    float: left;
+    margin-right: 40px;
 }
 
-.header-image #layer {
-    color: #FCEE0C;
-    font-family: 'violence', sans-serif;
-    font-size: 6em; 
-    position: absolute;
-    top: 39.5%;
-    left: 50%;
-}
 
-#about-me {
+.format {
     background-color: #fff;
+    padding: 90px 50px 125px 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#about-me img {
-    border-radius: 50%;
-    height: 15%;
-    width: 15%;
+
+.about-title {
+    text-shadow: 2px 3px #000;
+    color: #de41cd;
 }
+
+.profile-picture {
+    max-width: 150px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    height: auto;
+    width: 317px;
+    margin-top: 65px;
+    margin-left: 20px;
+}
+
+
+.contact {
+    background-color: var(--yellow);
+    color: #000;
+    border: 2px solid var(--neon-blue);
+    padding: 15px;
+    font-family: 'montserrat-bold', sans-serif;
+    float: inline-start;
+    margin-top: 20px;
+    transform: skew(-10deg);
+    text-decoration: none;
+}
+
+.contact:hover {
+    background-color: var(--neon-blue);
+    color: #000;
+    border: 2px solid #de41cd;
+}
+
+#projects {
+    background-color: var(--light-gray);
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+.card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 20px;
+  }
+
+  .card p {
+    text-align: center;
+  }
+  
+  .card img {
+    width: 50%;
+  }
+  
