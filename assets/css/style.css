@@ -58,6 +58,7 @@ div {
 .header {
     background-color: var(--yellow);
     padding: 15px;
+    overflow: hidden;
 }
 
 /* Resize and fix logo */
@@ -94,10 +95,12 @@ div {
     margin-top: 25px;
 }
 
+/* Test 
 .header-image {
     background-color: #000;
     position: relative;
 }
+*/
 
 .header-image h1 {
     color: var(--yellow);
@@ -113,6 +116,8 @@ div {
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .25));
     height: 650px;
     width: 100%;
+    background-color: #000;
+    position: relative;
 }
 
 /* Not sure if this is needed...
@@ -136,7 +141,7 @@ div {
 }
 
 
-.about-title {
+.title {
     text-shadow: 2px 3px #000;
     color: #de41cd;
 }
@@ -196,13 +201,14 @@ div {
     padding: 0 10px;
 }
 
+/* Card styling */
 .card {
     border-style: solid;
     border-width: 1px;
     padding: 10px;
     box-shadow: 10px 10px 5px #aaaaaa;
     margin: 20px;
-    transform: skew(-10deg);
+    background: var(--light-gray);
 }
 
 .card:hover {
@@ -211,13 +217,112 @@ div {
     padding: 10px;
     box-shadow: 10px 10px 5px #aaaaaa;
     margin: 20px;
-    color: #000;
+    transform: scale(1.2, 1.2);
 }
 
 .card img {
-    width: 100%; 
+    width: 100%;
 }
 
 .card p {
     text-align: center;
+    font-family: 'montserrat-bold', sans-serif;
+    margin-top: 10px;
+}
+
+/* End card styling */
+
+/* Contact Me Section */
+#contact-me h2 {
+    text-align: center;
+}
+
+/* box in contact section */
+.form {
+    box-shadow: 10px 10px 5px #aaaaaa;
+    padding: 20px;
+    background-color: var(--light-gray);
+    font-family: 'monserrat-bold', sans-serif;
+    text-align: center;
+    line-height: 30px;
+    width: 50%;
+    margin: auto;
+}
+
+/* Social Media logo positioning */
+.logos li {
+    display: inline-block;
+    position: relative;
+    padding-right: 35px;
+    margin-top: 40px;
+}
+
+.footer {
+    background-color: var(--dark-gray);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.footer p {
+    color: var(--yellow);
+    font-family: 'violence', sans-serif;
+    text-shadow: 2px 3px #000;
+    font-size: 34px;
+    margin-top: 20px;
+}
+
+
+/* Media query responsiveness */
+@media screen and (max-width:1920px) {
+    .et_pb_fullwidth_slider_0 .et_pb_slide {
+        background-size: contain !important;
+        height: 600px !important;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .et_pb_fullwidth_slider_0 .et_pb_slide {
+        background-size: contain !important;
+        height: 462px !important;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .et_pb_fullwidth_slider_0 .et_pb_slide {
+        background-size: contain !important;
+        height: 346px !important;
+    }
+}
+
+@media screen and (max-width:479px) {
+    .logo {
+        display: block;
+        margin-left: 100px;
+        margin-right: auto;
+        width: 40%;
+    }
+
+    #nav {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header div ul li {
+        display: block;
+    }
+
+    #nav a {
+        border-bottom: 2px solid var(--neon-blue);
+        border-left: none;
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+
+.header-image h1 {
+
+}
+
 }
