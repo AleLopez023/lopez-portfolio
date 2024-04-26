@@ -5,6 +5,7 @@
     --light-gray: #F5F5F5;
 }
 
+/* Font Import Info */
 
 @font-face {
     font-family: 'violence';
@@ -30,6 +31,8 @@
     src: url(../fonts/Montserrat-Bold.ttf) format('truetype');
 }
 
+/* General Styling */
+
 * {
     font-size: 18px;
     box-sizing: border-box;
@@ -49,17 +52,18 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/*
-div {
-    overflow: hidden;
+.float-left {
+    float: left;
+    margin-right: 40px;
 }
-*/
 
 .header {
     background-color: var(--yellow);
     padding: 15px;
     overflow: hidden;
 }
+
+/* Nav Bar Styling */
 
 .logo {
     margin-left: 30px;
@@ -84,6 +88,8 @@ div {
     border: 2px solid var(--neon-blue);
 }
 
+/* Styling for image under nav bar */
+
 .header div ul li {
     display: inline-block;
 }
@@ -98,15 +104,13 @@ div {
     background-color: #000;
 }
 
-
 .header-image h1 {
     color: var(--yellow);
     font-family: 'violence', sans-serif;
     font-size: 6em;
     position: absolute;
-    top: 250px;
-    /* find left in pixels */
-    left: 45%;
+    top: 240px;
+    left: 805px;
     text-shadow: 2px 3px var(--neon-blue);
 }
 
@@ -118,11 +122,7 @@ div {
     display: block;
 }
 
-.float-left {
-    float: left;
-    margin-right: 40px;
-}
-
+/* Main formating for sections of page */
 
 .format {
     background-color: #fff;
@@ -130,11 +130,14 @@ div {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Styling for title text */
 
 .title {
     text-shadow: 2px 3px #000;
     color: #de41cd;
 }
+
+/* Profile Image Styling */
 
 .profile-picture {
     max-width: 150px;
@@ -149,7 +152,7 @@ div {
     margin-bottom: 51px;
 }
 
-
+/* Contact Me Button Styling */
 .contact {
     background-color: var(--yellow);
     color: #000;
@@ -168,6 +171,8 @@ div {
     border: 2px solid #de41cd;
 }
 
+/* Projects Section */
+
 #projects {
     background-color: var(--light-gray);
 }
@@ -175,6 +180,8 @@ div {
 #projects h2 {
     text-align: center;
 }
+
+/* Project Card Positioning */
 
 .row {
     margin: 0 -5px;
@@ -221,8 +228,6 @@ div {
     margin-top: 10px;
 }
 
-/* End card styling */
-
 /* Contact Me Section */
 #contact-me h2 {
     text-align: center;
@@ -248,6 +253,7 @@ div {
     margin-top: 40px;
 }
 
+/* Footer Styling */
 .footer {
     background-color: var(--dark-gray);
     text-align: center;
@@ -265,9 +271,8 @@ div {
 
 /* Media Query Responsiveness */
 
-/*Mobile */
-/*Update float left on profile picture */
-@media only screen and (max-width: 767px) {
+/* Screen Size Max Width 562px */
+@media only screen and (max-width: 562px) {
     h2 {
         font-size: 55px;
         text-align: center;
@@ -308,10 +313,9 @@ div {
     }
 
     .header-image h1 {
-        font-size: 3em;
-        /* change into pixels */
-        top: 50%;
-        left: 16%;
+        font-size: 4em;
+        top: 355px;
+        left: 115px;
     }
 
     .profile-picture img {
@@ -351,18 +355,18 @@ div {
     }
 }
 
-/* Tablet Responsiveness */
-@media (max-width: 900px) {
+/* Screen max size 970px */
+@media only screen and (max-width: 970px) {
     h2 {
-        font-size: 55px;
+        font-size: 75px;
         text-align: center;
     }
 
     .logo {
         display: block;
-        margin-left: 100px;
+        margin-left: auto;
         margin-right: auto;
-        width: 40%;
+        width: 15%;
     }
 
     #nav {
@@ -393,26 +397,34 @@ div {
     }
 
     .header-image h1 {
-        font-size: 3em;
-        top: 93%;
-        left: 16%;
+        font-size: 4em;
+        top: 450px;
+        left: 258px;
+    }
+
+    .float-left {
+        float: none;
     }
 
     .profile-picture img {
-        width: 150px;
+        width: 209px;
         margin-top: 0;
-        margin-left: 60px;
+        margin-left: 230px;
         margin-bottom: 40px;
     }
 
-    .format {
-        padding: 25px 25px 100px 25px;
+    #projects.format {
+        padding: 25px 25px 1050px 25px;
+    }
+
+    .card:hover {
+        transform: scale(1.1, 1.1);
     }
 
     .contact {
         float: inline-start;
         transform: none;
-        margin-left: 50px;
+        margin-left: 250px;
         margin-top: 0;
     }
 
@@ -428,6 +440,99 @@ div {
         width: 100%;
         display: block;
         margin-bottom: 20px;
+    }
+
+    .logos img {
+        margin-left: 35px;
+    }
+}
+
+/* Media Query Screen size max 1200px */
+@media only screen and (max-width: 1200px) {
+    h2 {
+        font-size: 75px;
+        text-align: center;
+    }
+
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+    }
+
+    #nav {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header div ul li {
+        display: block;
+    }
+
+    #nav li:hover {
+        background-color: none;
+        border: none;
+    }
+
+    #nav a {
+        border-bottom: 2px solid var(--neon-blue);
+        border-left: none;
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .header-image img {
+        height: 300px;
+    }
+
+    .header-image h1 {
+        font-size: 4em;
+        top: 430px;
+        left: 566px;
+    }
+
+    .float-left {
+        float: none;
+    }
+
+    .profile-picture img {
+        width: 209px;
+        margin-top: 0;
+        margin-left: 385px;
+        margin-bottom: 40px;
+    }
+
+    #projects.format {
+        padding: 25px 25px 1350px 25px;
+    }
+
+    .card:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    .contact {
+        float: inline-start;
+        transform: none;
+        margin-left: 0px;
+        margin-top: 0;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .logos li {
+        margin-top: 20px;
+    }
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        padding: 0px 60px;
     }
 
     .logos img {
